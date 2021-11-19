@@ -331,15 +331,22 @@ int main(int argc, char** argv) {
 		if (smooth) shadowMap_empty_rend.ScaleType = Renderer::ScaleType::Linear;
 		shadowMap_empty_rend.DrawBitmap(mask_empty, 0, 0, shadowMap_empty.GetWidth(), shadowMap_empty.GetHeight(), 0, 0, mask_shadow.GetWidth(), mask_shadow.GetHeight());
 
-		// shadowMap_rend.ApplyMask(absoluteShadowMask);
-		// for (int i = 0; i < shadowMap.GetWidth(); i++) {
-		// 	for (int j = 0; j < shadowMap.GetWidth(); j++) {
-		// 		shadowMap.SetRawPixel(shadowMap_wall.GetRawPixel(i, j), i, j);
-		// 	}
-		// }
-		// // renderer.ApplyMask(shadowMap);
+		for (int i = 0; i < shadowMap.GetWidth(); i++) {
+			for (int j = 0; j < shadowMap.GetHeight(); j++) {
+				// std::cout << "i " << i << i << i << '\n';
+				// std::cout << "j " << j << '\n';
+				// std::cout << "shadowMap_empt.GetRawPixel " << shadowMap_empty.GetRawPixel(i, j) << "\n";
+				// std::cout << "shadowMap_empt.GetWidth " << shadowMap_empty.GetWidth() << "\n";
+				// std::cout << "shadowMap_empt.GetHeight " << shadowMap_empty.GetHeight() << "\n\n";
+				shadowMap.SetRawPixel(
+						shadowMap_wall.GetRawPixel(i, j) | 
+						shadowMap_empty.GetRawPixel(i, j),
+						i, j);
+			}
+		}
+
 		// renderer.DrawBitmap(shadowMap, 0, 0, renderer.GetWidth(), renderer.GetHeight(), 0, 0, shadowMap.GetWidth(), shadowMap.GetHeight());
-		
+
 		for(int x = 0; x < gen.WIDTH; x++) {
 			for(int y = 0; y < gen.HEIGHT; y++) {
 				char current = gen.map[y][x];
@@ -364,5 +371,5 @@ int main(int argc, char** argv) {
 }
 
 // build and run - keyboard shortcut
-// :nnoremap <nowait><leader>br :wa<CR>:make -C build<CR>:!./build/basicLighting<CR>
+// :nnoremap <nowait><leader>b :wa<CR>:make -C build<CR>:!build/basicLighting<CR>
 
