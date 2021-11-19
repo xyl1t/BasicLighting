@@ -304,12 +304,14 @@ int main(int argc, char** argv) {
 				float lightVal = lm.GetNormalizedLight(x, y);
 				uint8_t colorLightVal = 255*lightVal;//(0.1 < lightVal ? lightVal : 0.1);
 				mask_shadow.SetPixel({colorLightVal, colorLightVal, colorLightVal}, x, y);
+
 				if (gen.map[y][x] == '#') {
 					mask_wall.SetPixel({colorLightVal, colorLightVal, colorLightVal}, x, y);
 				} else {
 					mask_empty.SetPixel({colorLightVal, colorLightVal, colorLightVal}, x, y);
 				}
-				if (lightVal != 0) {
+
+				if (lightVal > 0) {
 					absoluteShadowMask_rend.FillRectangle(0xffffffff, x * pixelSize, y * pixelSize, pixelSize, pixelSize);
 				}
 			}
@@ -325,27 +327,36 @@ int main(int argc, char** argv) {
 		Renderer shadowMap_wall_rend(shadowMap_wall.GetData(), shadowMap_wall.GetWidth(), shadowMap_wall.GetHeight());
 		if (smooth) shadowMap_wall_rend.ScaleType = Renderer::ScaleType::Linear;
 		shadowMap_wall_rend.DrawBitmap(mask_wall, 0, 0, shadowMap_wall.GetWidth(), shadowMap_wall.GetHeight(), 0, 0, mask_shadow.GetWidth(), mask_shadow.GetHeight());
+		shadowMap_wall_rend.ApplyMask(absoluteShadowMask);
 
 		Bitmap shadowMap_empty(windowWidth, windowHeight);
 		Renderer shadowMap_empty_rend(shadowMap_empty.GetData(), shadowMap_empty.GetWidth(), shadowMap_empty.GetHeight());
 		if (smooth) shadowMap_empty_rend.ScaleType = Renderer::ScaleType::Linear;
 		shadowMap_empty_rend.DrawBitmap(mask_empty, 0, 0, shadowMap_empty.GetWidth(), shadowMap_empty.GetHeight(), 0, 0, mask_shadow.GetWidth(), mask_shadow.GetHeight());
 
-		for (int i = 0; i < shadowMap.GetWidth(); i++) {
-			for (int j = 0; j < shadowMap.GetHeight(); j++) {
-				// std::cout << "i " << i << i << i << '\n';
-				// std::cout << "j " << j << '\n';
-				// std::cout << "shadowMap_empt.GetRawPixel " << shadowMap_empty.GetRawPixel(i, j) << "\n";
-				// std::cout << "shadowMap_empt.GetWidth " << shadowMap_empty.GetWidth() << "\n";
-				// std::cout << "shadowMap_empt.GetHeight " << shadowMap_empty.GetHeight() << "\n\n";
-				shadowMap.SetRawPixel(
-						shadowMap_wall.GetRawPixel(i, j) | 
-						shadowMap_empty.GetRawPixel(i, j),
-						i, j);
-			}
-		}
+		// for (int i = 0; i < shadowMap.GetWidth(); i++) {
+		// 	for (int j = 0; j < shadowMap.GetHeight(); j++) {
+		// 		// std::cout << "i " << i << i << i << '\n';
+		// 		// std::cout << "j " << j << '\n';
+		// 		// std::cout << "shadowMap_empt.GetRawPixel " << shadowMap_empty.GetRawPixel(i, j) << "\n";
+		// 		// std::cout << "shadowMap_empt.GetWidth " << shadowMap_empty.GetWidth() << "\n";
+		// 		// std::cout << "shadowMap_empt.GetHeight " << shadowMap_empty.GetHeight() << "\n\n";
+		// 		uint8_t col_empty = shadowMap_empty.GetPixel(i, j).r;
+		// 		uint8_t col_wall = shadowMap_wall.GetPixel(i, j).r;
+		// 		uint8_t col = col_empty > col_wall ? col_empty : col_wall;
+
+		// 		shadowMap.SetPixel({col, col, col}, i, j);
+
+		// 		// shadowMap.SetRawPixel(
+		// 		// 		shadowMap_wall.GetRawPixel(i, j) | 
+		// 		// 		shadowMap_empty.GetRawPixel(i, j),
+		// 		// 		i, j);
+		// 	}
+		// }
 
 		// renderer.DrawBitmap(shadowMap, 0, 0, renderer.GetWidth(), renderer.GetHeight(), 0, 0, shadowMap.GetWidth(), shadowMap.GetHeight());
+
+		shadowMap_rend.ApplyMask(absoluteShadowMask);
 
 		for(int x = 0; x < gen.WIDTH; x++) {
 			for(int y = 0; y < gen.HEIGHT; y++) {
@@ -362,6 +373,15 @@ int main(int argc, char** argv) {
 		}
 
 		renderer.ApplyMask(shadowMap);
+
+		for(int x = 0; x < gen.WIDTH; x++) {
+			for(int y = 0; y < gen.HEIGHT; y++) {
+				char current = gen.map[y][x];
+				if (current == '#') {
+					renderer.DrawPixel(RGB::Blue/2, x * pixelSize + pixelSize/2, y * pixelSize + pixelSize/2);
+				} 
+			}
+		}
 
 		display.Update();
 	}
