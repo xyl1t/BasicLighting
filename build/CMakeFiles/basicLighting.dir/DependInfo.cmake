@@ -1,21 +1,18 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/marat/programming/cpp/BasicLighting/src/common.cpp" "/home/marat/programming/cpp/BasicLighting/build/CMakeFiles/basicLighting.dir/src/common.cpp.o"
-  "/home/marat/programming/cpp/BasicLighting/src/display.cpp" "/home/marat/programming/cpp/BasicLighting/build/CMakeFiles/basicLighting.dir/src/display.cpp.o"
-  "/home/marat/programming/cpp/BasicLighting/src/eventHandler.cpp" "/home/marat/programming/cpp/BasicLighting/build/CMakeFiles/basicLighting.dir/src/eventHandler.cpp.o"
-  "/home/marat/programming/cpp/BasicLighting/src/generation.cpp" "/home/marat/programming/cpp/BasicLighting/build/CMakeFiles/basicLighting.dir/src/generation.cpp.o"
-  "/home/marat/programming/cpp/BasicLighting/src/main.cpp" "/home/marat/programming/cpp/BasicLighting/build/CMakeFiles/basicLighting.dir/src/main.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/include/SDL2"
-  ".././include"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/common.cpp" "CMakeFiles/basicLighting.dir/src/common.cpp.o" "gcc" "CMakeFiles/basicLighting.dir/src/common.cpp.o.d"
+  "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/display.cpp" "CMakeFiles/basicLighting.dir/src/display.cpp.o" "gcc" "CMakeFiles/basicLighting.dir/src/display.cpp.o.d"
+  "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/eventHandler.cpp" "CMakeFiles/basicLighting.dir/src/eventHandler.cpp.o" "gcc" "CMakeFiles/basicLighting.dir/src/eventHandler.cpp.o.d"
+  "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/generation.cpp" "CMakeFiles/basicLighting.dir/src/generation.cpp.o" "gcc" "CMakeFiles/basicLighting.dir/src/generation.cpp.o.d"
+  "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/main.cpp" "CMakeFiles/basicLighting.dir/src/main.cpp.o" "gcc" "CMakeFiles/basicLighting.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.

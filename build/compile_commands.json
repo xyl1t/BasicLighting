@@ -1,27 +1,27 @@
 [
 {
-  "directory": "/home/marat/programming/cpp/BasicLighting/build",
-  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/marat/programming/cpp/BasicLighting/./include  -g   -Wall -std=gnu++17 -o CMakeFiles/basicLighting.dir/src/common.cpp.o -c /home/marat/programming/cpp/BasicLighting/src/common.cpp",
-  "file": "/home/marat/programming/cpp/BasicLighting/src/common.cpp"
+  "directory": "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/usr/local/Cellar/sdl2/2.0.16/include/SDL2 -I/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/./include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -Wall -std=gnu++17 -o CMakeFiles/basicLighting.dir/src/common.cpp.o -c /Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/common.cpp",
+  "file": "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/common.cpp"
 },
 {
-  "directory": "/home/marat/programming/cpp/BasicLighting/build",
-  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/marat/programming/cpp/BasicLighting/./include  -g   -Wall -std=gnu++17 -o CMakeFiles/basicLighting.dir/src/display.cpp.o -c /home/marat/programming/cpp/BasicLighting/src/display.cpp",
-  "file": "/home/marat/programming/cpp/BasicLighting/src/display.cpp"
+  "directory": "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/usr/local/Cellar/sdl2/2.0.16/include/SDL2 -I/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/./include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -Wall -std=gnu++17 -o CMakeFiles/basicLighting.dir/src/display.cpp.o -c /Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/display.cpp",
+  "file": "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/display.cpp"
 },
 {
-  "directory": "/home/marat/programming/cpp/BasicLighting/build",
-  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/marat/programming/cpp/BasicLighting/./include  -g   -Wall -std=gnu++17 -o CMakeFiles/basicLighting.dir/src/eventHandler.cpp.o -c /home/marat/programming/cpp/BasicLighting/src/eventHandler.cpp",
-  "file": "/home/marat/programming/cpp/BasicLighting/src/eventHandler.cpp"
+  "directory": "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/usr/local/Cellar/sdl2/2.0.16/include/SDL2 -I/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/./include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -Wall -std=gnu++17 -o CMakeFiles/basicLighting.dir/src/eventHandler.cpp.o -c /Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/eventHandler.cpp",
+  "file": "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/eventHandler.cpp"
 },
 {
-  "directory": "/home/marat/programming/cpp/BasicLighting/build",
-  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/marat/programming/cpp/BasicLighting/./include  -g   -Wall -std=gnu++17 -o CMakeFiles/basicLighting.dir/src/generation.cpp.o -c /home/marat/programming/cpp/BasicLighting/src/generation.cpp",
-  "file": "/home/marat/programming/cpp/BasicLighting/src/generation.cpp"
+  "directory": "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/usr/local/Cellar/sdl2/2.0.16/include/SDL2 -I/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/./include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -Wall -std=gnu++17 -o CMakeFiles/basicLighting.dir/src/generation.cpp.o -c /Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/generation.cpp",
+  "file": "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/generation.cpp"
 },
 {
-  "directory": "/home/marat/programming/cpp/BasicLighting/build",
-  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/marat/programming/cpp/BasicLighting/./include  -g   -Wall -std=gnu++17 -o CMakeFiles/basicLighting.dir/src/main.cpp.o -c /home/marat/programming/cpp/BasicLighting/src/main.cpp",
-  "file": "/home/marat/programming/cpp/BasicLighting/src/main.cpp"
+  "directory": "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/usr/local/Cellar/sdl2/2.0.16/include/SDL2 -I/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/./include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -Wall -std=gnu++17 -o CMakeFiles/basicLighting.dir/src/main.cpp.o -c /Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/main.cpp",
+  "file": "/Users/maratisaw/Home/Documents/Programming/C++/SDL/BasicLighting/src/main.cpp"
 }
 ]
