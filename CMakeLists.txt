@@ -13,7 +13,7 @@ if (WIN32)
 endif()
 
 set(INCLUDE_DIR "./include")
-file(GLOB SRC "./src/*" ${INCLUDE_DIR}/*)
+file(GLOB SRC CONFIGURE_DEPENDS "./src/*" ${INCLUDE_DIR}/*)
 
 if (WIN32)
 	add_definitions(-DSDL_MAIN_HANDLED)
